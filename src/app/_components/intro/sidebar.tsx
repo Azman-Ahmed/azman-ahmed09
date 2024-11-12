@@ -9,7 +9,6 @@ import Skills from './Skills';
 import Image from 'next/image';
 import {NAME, DESIGNATION, SOCIAL_LINKS } from '../constants/constants'
 import azman from "../../../.././public/me.png"
-// import Osama from '../../../public/images/osama.jpg';
 
 const Intro = () => {
   return (
@@ -31,6 +30,8 @@ const Intro = () => {
         <Tools />
         <Contact />
         <Download icon={<FaDownload />} />
+
+        
       </div>
 
       {/* fixed at bottom */}
