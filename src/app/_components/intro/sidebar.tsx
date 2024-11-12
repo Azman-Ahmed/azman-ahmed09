@@ -10,7 +10,9 @@ import Image from 'next/image';
 import {NAME, DESIGNATION, SOCIAL_LINKS } from '../constants/constants'
 import azman from "../../../.././public/me.png"
 
-const Intro = () => {
+
+
+const Intro = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
   return (
     <>
       {/* fixed at top */}

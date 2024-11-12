@@ -1,12 +1,14 @@
-import React from 'react'
-import Intro from '../_components/intro/sidebar'
+import React, { useState } from 'react';
+import Intro from '../_components/intro/sidebar';
 
-const page = () => {
+const Page = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div>
-        <Intro/>
+      <Intro isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
