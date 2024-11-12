@@ -15,6 +15,7 @@ type IntroProps = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
+
 const Intro: React.FC<IntroProps> = ({ isOpen, setIsOpen }) => {
   return (
     <div
