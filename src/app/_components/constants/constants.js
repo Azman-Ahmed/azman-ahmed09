@@ -56,8 +56,8 @@ export const TECH_STACK = [
 ];
 
 export const CONTACTS = {
-  EMAIL: 'iosamajavaid@gmail.com',
-  PHONE: '+923159591822',
+  EMAIL: 'ahmed.azman.bd0007@gmail.com',
+  PHONE: '+8801872773081',
 };
 export const SOCIAL_LINKS = {
   GITHUB: 'https://github.com/Azman-Ahmed',
