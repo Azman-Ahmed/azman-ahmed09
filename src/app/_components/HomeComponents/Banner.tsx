@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 import BannerLayout from "../layouts/BannerLayout";
-import Typewriter from "typewriter-effect";
+import dynamic from "next/dynamic";
 import azman from "../../../../public/me.png"
 import Image from "next/image";
 
+const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false }); // Dynamically import without SSR
 
 const Banner = () => {
   return (
