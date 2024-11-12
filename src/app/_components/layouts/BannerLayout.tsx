@@ -3,7 +3,7 @@ const BannerLayout = ({ children }: { children: React.ReactNode }) => {
       <div
         className="relative backdrop-blur-sm w-full h-[50vh] bg-fixed z-10"
         style={{
-          background: "url(/images/background.png)",
+          background: "url(/images/002.jpg)",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
