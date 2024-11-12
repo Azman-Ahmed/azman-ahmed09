@@ -10,8 +10,8 @@ const BannerLayout = ({ children }: { children: React.ReactNode }) => {
         backgroundSize: "cover",
       }}
     >
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center w-full h-full bg-gradient-to-t from-MidNightBlack">
-        <div className="bg-Black/10 backdrop-blur-sm w-full h-full flex items-center justify-center">
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center w-full h-[40vh] bg-gradient-to-t from-MidNightBlack">
+        <div className="bg-Black/10 backdrop-blur-sm w-full h-[40vh] flex items-center justify-center">
           {children}
         </div>
       </div>

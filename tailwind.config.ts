@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        Green: '#32CD32', // Replace with your desired color code
+        Green: '#32CD32', 
         MidNightBlack: '#121212',
         LightGray: '#D3D3D3',
         Snow: '#FFFAFA',

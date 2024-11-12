@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import BannerLayout from "../layouts/BannerLayout";
-import dynamic from "next/dynamic";
+import Typewriter from "typewriter-effect";
+import azman from "../../../../public/me.png"
+import Image from "next/image";
 
-const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false }); // Dynamically import without SSR
 
 const Banner = () => {
   return (
@@ -35,13 +36,13 @@ const Banner = () => {
                   {">"}
                 </span>
               </div>
-              <button className="bg-Green text-Snow px-4 py-2 mt-4 rounded-lg font-bold">Explore</button>
+              <button className="bg-Green text-Snow px-6 py-2 mt-0 rounded-lg font-bold">Explore</button>
             </div>
             <div className="flex items-center justify-center md:justify-start">
-              <img src="/images/avatar.png" alt="Avatar" className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48" />
+              <Image className='w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48' src={azman} alt='profile picture' />
             </div>
           </div>
-          <div className="flex justify-around w-full text-Green mt-6 text-sm md:text-base font-semibold">
+          <div className="flex justify-around w-full text-green-400 mt-3 text-sm md:text-base font-semibold">
             <div>10+ Completed Projects</div>
             <div>8+ Freelance Clients</div>
             <div>5+ Honors & Awards</div>
