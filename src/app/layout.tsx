@@ -6,9 +6,8 @@ import { useState } from "react";
 import { FaBars, FaMousePointer } from "react-icons/fa";
 import { SlOptionsVertical } from "react-icons/sl";
 import Intro from "./_components/intro/sidebar";
+import Nav from "./_components/intro/rightbar";
 
-// import Intro from "../components/Common/Intro";
-// import Nav from "../components/Common/Nav/Nav";
 
 export default function RootLayout({
   children,
@@ -66,7 +65,6 @@ export default function RootLayout({
           <div className='w-full h-auto lg:w-9/12 shadow-2xl bg-DeepNightBlack relative overflow-auto overflow-x-hidden no-scrollbar'>{children}</div>
 
           {/* right side */}
-          {/* right side */}
           <div className={`hidden lg:block absolute lg:w-20 lg:relative bg-DeepNightBlack shadow-2xl rounded-xl overflow-hidden`}>
             <div onClick={(e) => setIsOpen(!isOpen)} className='bg-MidNightBlack text-Green hidden lg:flex items-center h-16 justify-center text-2xl '>
               <span className='icon border-2 border-Green p-2 rounded-xl'>
@@ -78,7 +76,7 @@ export default function RootLayout({
               NavBar
             </span>
           </div>
-          {/* {<Nav isOpen={isOpen} setIsOpen={setIsOpen} />} */}
+          {<Nav isOpen={isOpen} setIsOpen={setIsOpen} />}
         </div>
       </div>
 
