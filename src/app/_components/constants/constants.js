@@ -60,8 +60,9 @@ export const CONTACTS = {
   PHONE: '+923159591822',
 };
 export const SOCIAL_LINKS = {
-  GITHUB: 'https://github.com/osamajavaid',
-  LINKEDIN: 'https://www.linkedin.com/in/iosamajavaid/',
-  TWITTER: 'https://twitter.com/iosamajavaid',
-  FACEBOOK: 'https://www.facebook.com/iosamajavaid',
+  GITHUB: 'https://github.com/Azman-Ahmed',
+  LINKEDIN: 'https://www.linkedin.com/in/azman-ewubd/',
+  TWITTER: 'https://twitter.com',
+  FACEBOOK: 'https://www.facebook.com/azman.ahmed.7796/',
+  
 };
