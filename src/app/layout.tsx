@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [intro, setIntro] = useState(false);
+  const [intro, setIntro] = useState(true);
 
   return (
     <html lang="en">
