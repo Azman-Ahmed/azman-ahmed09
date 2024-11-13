@@ -1,11 +1,17 @@
 export const NAME = 'MD Azman Ahmed';
 
-export const DESIGNATION = `Laravel Developer`;
 
-export const DETAILS = {
-  Residence: 'Banggladesh',
+export const DESIGNATION: { position1: string; position2: string; position3: string; position4: string} = {
+  position1: 'Laravel-Next js Developer at SoftBD Ltd. ',
+  position2: 'Adjunct Faculty at Fareast International University ',
+  position3: 'Pupil at Codeforces',
+  position4: 'Graduated from East West University'
+};
+
+export const DETAILS: { Residence: string; City: string; Age: number } = {
+  Residence: 'Bangladesh',
   City: 'Dhaka',
-  Age: '26',
+  Age: 26, 
 };
 
 export const SKILLS = [
