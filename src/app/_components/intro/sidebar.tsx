@@ -2,13 +2,13 @@ import Link from 'next/link';
 import { FaDownload, FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import Contact from './Contact';
 import Download from './Download';
-import Languages from './Languages';
 import Location from './Location';
 import Tools from './Tools';
 import Skills from './Skills';
 import Image from 'next/image';
 import { NAME, DESIGNATION, SOCIAL_LINKS } from '../constants/constants';
 import azman from '../../../.././public/me.png';
+import GithubSkill from './Githubskill';
 // import { DESIGNATION } from '../constants/constants';
 
 const Intro = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
@@ -30,7 +30,7 @@ const Intro = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: React.Dispat
       {/* middle components */}
       <div className='beech z-20 flex flex-col overflow-y-scroll pt-72 top-72 space-y-6 divide-y divide-white overflow-x-hidden no-scrollbar px-4'>
         <Location />
-        <Languages />
+        <GithubSkill/>
         <Skills />
         <Tools />
         <Contact />
