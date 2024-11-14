@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import useSWR from 'swr';
 import { Pie } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -11,33 +10,47 @@ import {
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-// SWR fetcher function using Axios
-const fetcher = (url: string) => axios.get(url).then(res => res.data);
-
-const GithubSkill = () => {
+const GitHubLanguagesPieChart = () => {
   const [languageData, setLanguageData] = useState<{ [key: string]: number }>({});
   const [chartData, setChartData] = useState<any>(null);
+  const [loadingText, setLoadingText] = useState<string>('Loading');
 
   const GITHUB_USERNAME = 'Azman-Ahmed'; // Replace with your GitHub username
-
-  // Use SWR to fetch the list of repositories
-  const { data: repos, error: reposError } = useSWR(
-    `https://api.github.com/users/${GITHUB_USERNAME}/repos`,
-    fetcher
-  );
+  const GITHUB_TOKEN = 'your_personal_access_token'; // Replace with your actual GitHub Personal Access Token
 
   useEffect(() => {
-    if (repos) {
-      const fetchLanguages = async () => {
+    // Fetch all repositories
+    const fetchLanguageData = async () => {
+      try {
+        const reposResponse = await axios.get(
+          `https://api.github.com/users/${GITHUB_USERNAME}/repos`,
+          {
+            headers: {
+              Authorization: `Bearer ${GITHUB_TOKEN}`, // Authentication header with personal access token
+            },
+          }
+        );
+        const repos = reposResponse.data;
+
         let aggregatedLanguages: { [key: string]: number } = {};
 
-        // Fetch languages for each repository using SWR
-        await Promise.all(repos.map(async (repo: any) => {
-          const { data: languages } = await axios.get(repo.languages_url);
-          for (const [language, bytes] of Object.entries(languages)) {
-            aggregatedLanguages[language] = (aggregatedLanguages[language] || 0) + (bytes as number);
-          }
-        }));
+        // Fetch languages for each repository
+        await Promise.all(
+          repos.map(async (repo: any) => {
+            const { data: languages } = await axios.get(repo.languages_url, {
+              headers: {
+                Authorization: `Bearer ${GITHUB_TOKEN}`, // Authentication header with personal access token
+              },
+            });
+            for (const [language, bytes] of Object.entries(languages)) {
+              if (aggregatedLanguages[language]) {
+                aggregatedLanguages[language] += bytes as number;
+              } else {
+                aggregatedLanguages[language] = bytes as number;
+              }
+            }
+          })
+        );
 
         setLanguageData(aggregatedLanguages);
 
@@ -64,20 +77,47 @@ const GithubSkill = () => {
             },
           ],
         });
-      };
+      } catch (error) {
+        console.error('Error fetching language data', error);
+      }
+    };
 
-      fetchLanguages();
-    }
-  }, [repos]);
+    fetchLanguageData();
 
-  if (reposError) return <p>Error loading data...</p>;
+    // Typewriting effect for the loading text with delay
+    let dotCount = 0;
+    let delayCount = 0; // Count how many times we've shown the 3 dots and added delay
+    const loadingInterval = setInterval(() => {
+      setLoadingText((prevText) => {
+        if (dotCount < 3) {
+          dotCount += 1;
+        } else {
+          // Once 3 dots are shown, delay for 1 second before starting again
+          if (delayCount === 0) {
+            delayCount = 1;
+            setLoadingText('Loading'); // Reset to 'Loading' with no dots
+            return prevText;
+          } else {
+            dotCount = 0;
+            delayCount = 0;
+            return 'Loading.'; // Start again after delay
+          }
+        }
+        return prevText + '.';
+      });
+    }, 500); // Update every 500ms
+
+    // Clear the interval when the component is unmounted or the data is fetched
+    return () => clearInterval(loadingInterval);
+
+  }, []);
 
   return (
     <div className="p-4 rounded-lg flex flex-col items-center" style={{ backgroundColor: 'transparent' }}>
       <h3 className="text-lg font-bold mb-4 text-white">Languages</h3>
       {chartData ? (
-        <Pie 
-          data={chartData} 
+        <Pie
+          data={chartData}
           options={{
             responsive: true,
             plugins: {
@@ -87,13 +127,13 @@ const GithubSkill = () => {
                 },
               },
             },
-          }} 
+          }}
         />
       ) : (
-        <p>Loading...</p>
+        <p>{loadingText}</p>
       )}
     </div>
   );
 };
 
-export default GithubSkill;
+export default GitHubLanguagesPieChart;

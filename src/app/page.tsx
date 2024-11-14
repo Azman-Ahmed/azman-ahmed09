@@ -6,6 +6,7 @@ import Clients from "./_components/HomeComponents/Clients";
 import Footer from "./_components/HomeComponents/Footer";
 
 export default function Home() {
+  
   return (
     <>
       <div className="Home-page -z-10">
