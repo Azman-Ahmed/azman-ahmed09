@@ -2,10 +2,10 @@
 import React from "react";
 import BannerLayout from "../layouts/BannerLayout";
 import dynamic from "next/dynamic";
-import azman from "../../../../public/me.png"
+import azman from "../../../../public/me.jpg";
 import Image from "next/image";
 
-const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false }); 
+const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
 
 const Banner = () => {
   return (
@@ -49,7 +49,7 @@ const Banner = () => {
             </div>
             <div className="flex items-center justify-center md:justify-start">
               <Image
-                className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full" // Added rounded-full to make the image frame round
                 src={azman}
                 alt="profile picture"
               />
@@ -66,6 +66,5 @@ const Banner = () => {
     </div>
   );
 };
-
 
 export default Banner;
