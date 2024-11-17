@@ -33,7 +33,7 @@ const Intro = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: React.Dispat
         <Tools />
         <Skills />
         <Contact />
-        <GithubSkill/>
+        {/* <GithubSkill/> */}
         <Download icon={<FaDownload />} />
       </div>
 
