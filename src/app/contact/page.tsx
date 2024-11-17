@@ -22,7 +22,7 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const form = useRef<HTMLFormElement | null>(null); // Initialize with null
+  const form = useRef<HTMLFormElement | null>(null); 
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,6 +32,7 @@ const Contact = () => {
         .sendForm('service_3s73tyl', 'template_kmnplmf', form.current, '4WJY6NkRd272G5dvl')
         .then(
           () => {
+            console.log(form.current)
             console.log('SUCCESS!');
           },
           (error) => {
