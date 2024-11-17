@@ -75,6 +75,7 @@ export default function RootLayout({
             <div className='w-full h-auto lg:w-9/12 shadow-2xl bg-DeepNightBlack relative overflow-auto overflow-x-hidden no-scrollbar'>
               {children}
             </div>
+            
 
             {/* right side */}
             <div className={`hidden lg:block absolute lg:w-20 lg:relative bg-DeepNightBlack shadow-2xl rounded-xl overflow-hidden`}>

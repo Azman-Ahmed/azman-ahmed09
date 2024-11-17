@@ -86,12 +86,8 @@ export const TECH_STACK = [
 ];
 
 export const CONTACTS = {
-  Country: "Bangladesh",
-  City: "Dhaka",
-  Current1: "SoftBD Ltd.",
   EMAIL: 'ahmed.azman.bd0007@gmail.com',
   PHONE: '+8801872773081',
-  Linkedin: "https://www.linkedin.com/in/azman-ewubd/",
 };
 
 export const SOCIAL_LINKS = {
@@ -100,3 +96,57 @@ export const SOCIAL_LINKS = {
   TWITTER: 'https://twitter.com',
   FACEBOOK: 'https://www.facebook.com/azman.ahmed.7796/',
 };
+
+
+
+export const EDUCATION = [
+  {
+    id: 0,
+    title: 'Undergraduation',
+    degree: 'Bachelors in Computer Science & Engineering',
+    detail: "Bachelor's Degree in Computer Science & Engineers.",
+    year: '2020 - 2024',
+  },
+  {
+    id: 1,
+    title: 'University Laboratory School & College',
+    degree: 'Higher School Certificate',
+    detail: "Completed HSC in Science with a GPA of 4.18",
+    year: '2017 - 2019',
+  },
+  {
+    id: 2,
+    title: 'Ahmed Bawany Academy',
+    degree: 'Secondary School Certificate',
+    detail: "Completed SSC in Science with a GPA of 5.00",
+    year: '2006 - 2017',
+  },
+];
+
+
+export const EXPERIENCE = [
+  {
+    id: 1,
+    company: "SoftBD Ltd.",
+    role: "Full Stack Developer",
+    detail1: "As a frontend developer, I use React, Next & JavaScript to build user interfaces for web applications.",
+    duration: "07/2024 - Present",
+    location: "Dhaka, Bangladesh",
+  },
+  {
+    id: 2,
+    company: "Fareast International University",
+    role: "Adjunct Faculty",
+    detail: "Teaching",
+    duration: "06/2024 - Present",
+    location: "Dhaka, Bangladesh",
+  },
+  {
+    id: 3,
+    company: "East West University",
+    role: "Undergraduate Teaching Assistant",
+    detail: "Teaching",
+    duration: "01/2022 - 01/2023",
+    location: "Dhaka, Bangladesh",
+  },
+];
