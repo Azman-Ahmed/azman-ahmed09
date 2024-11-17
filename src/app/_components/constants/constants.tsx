@@ -90,7 +90,9 @@ export const CONTACTS = {
   PHONE: '+8801872773081',
   Country: "Bangladesh",
   City: "Dhaka",
-  Current1: "SoftBD Ltd."
+  Current1: "SoftBD Ltd.",
+  Linkedin: "aaa"
+  
 };
 
 export const SOCIAL_LINKS = {
