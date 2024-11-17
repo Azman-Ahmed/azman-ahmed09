@@ -88,6 +88,9 @@ export const TECH_STACK = [
 export const CONTACTS = {
   EMAIL: 'ahmed.azman.bd0007@gmail.com',
   PHONE: '+8801872773081',
+  Country: "Bangladesh",
+  City: "Dhaka",
+  Current1: "SoftBD Ltd."
 };
 
 export const SOCIAL_LINKS = {

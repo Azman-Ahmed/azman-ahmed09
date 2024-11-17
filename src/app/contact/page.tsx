@@ -1,32 +1,14 @@
-"use client"
+"use client";
 
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import BannerLayout from "../_components/layouts/BannerLayout";
+import { CONTACTS } from "../_components/constants/constants";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { SiUpwork } from "react-icons/si";
 import { HiMail, HiUser } from "react-icons/hi";
 import { BsChatTextFill } from "react-icons/bs";
 import Footer from "../_components/HomeComponents/Footer";
-
-// Type definition for CONTACTS object
-export interface ContactInfo {
-  EMAIL: string;
-  PHONE: string;
-  Linkedin: string;
-  Country: string;
-  City: string;
-  Current1: string; // Company name or current role
-}
-
-export const CONTACTS: ContactInfo = {
-  EMAIL: "example@example.com",
-  PHONE: "123-456-7890",
-  Linkedin: "https://www.linkedin.com/in/your-profile",
-  Country: "Your Country",    // Add Country
-  City: "Your City",         // Add City
-  Current1: "Your Company",  // Add current company
-};
 
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +22,7 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const form = useRef<HTMLFormElement | null>(null);
+  const form = useRef<HTMLFormElement | null>(null); 
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
@@ -50,7 +32,7 @@ const Contact = () => {
         .sendForm('service_3s73tyl', 'template_kmnplmf', form.current, '4WJY6NkRd272G5dvl')
         .then(
           () => {
-            console.log(form.current);
+            console.log(form)
             console.log('SUCCESS!');
           },
           (error) => {
@@ -105,9 +87,15 @@ const Contact = () => {
           <a className="hover:scale-125 ease-in-out duration-700" href={`mailto:${CONTACTS.EMAIL}`} target="_blank" rel="noreferrer">
             <HiMail />
           </a>
+          {/* <a className="hover:scale-125 ease-in-out duration-700" href={CONTACTS.Github} target="_blank" rel="noreferrer">
+            <FaGithub />
+          </a> */}
           <a className="hover:scale-125 ease-in-out duration-700" href={CONTACTS.Linkedin} target="_blank" rel="noreferrer">
             <FaLinkedin />
           </a>
+          {/* <a className="hover:scale-125 ease-in-out duration-700 text-2xl sm:text-4xl mt-1" href={CONTACTS.Upwork} target="_blank" rel="noreferrer">
+            <SiUpwork />
+          </a> */}
         </div>
 
         {/* Contact Form Section */}
