@@ -1,8 +1,7 @@
 // Nav.tsx
 
 import { ImCross } from 'react-icons/im';
-import { FiAward } from 'react-icons/fi';
-import { FaHandshake } from 'react-icons/fa';
+import { FaBlog, FaHandshake, FaTasks } from 'react-icons/fa';
 import { ImHome } from 'react-icons/im';
 import { HiIdentification } from 'react-icons/hi';
 import NavItem from './NavItem';
@@ -19,7 +18,8 @@ const Nav = ({ setIsOpen, isOpen }: { setIsOpen: any; isOpen: any }) => {
                     <NavItem setIsOpen={setIsOpen} NavRoute={'/'} NavIcon={<ImHome />} NavText={'Home'} />
                     <NavItem setIsOpen={setIsOpen} NavRoute={'/contact'} NavIcon={<FaHandshake />} NavText={'Contact'} />
                     <NavItem setIsOpen={setIsOpen} NavRoute={'/background'} NavIcon={<HiIdentification />} NavText={'Background'} />
-                    <NavItem setIsOpen={setIsOpen} NavRoute={'/portfolio'} NavIcon={<FiAward />} NavText={'Portfolio'} />
+                    <NavItem setIsOpen={setIsOpen} NavRoute={'/projects'} NavIcon={<FaTasks/>} NavText='My Projects'/>
+                    <NavItem setIsOpen={setIsOpen} NavRoute={'/blogs'} NavIcon={<FaBlog/>} NavText='My Blogs'/>                   
                 </div>
             </div>
         </DrawerLayout>

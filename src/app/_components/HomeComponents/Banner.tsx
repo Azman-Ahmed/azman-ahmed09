@@ -55,12 +55,12 @@ const Banner = () => {
               />
             </div>
           </div>
-          <div className="flex justify-around w-full text-green-400 mt-3 text-sm md:text-base font-semibold">
+          {/* <div className="flex justify-around w-full text-green-400 mt-3 text-sm md:text-base font-semibold">
             <div>10+ Completed Projects</div>
             <div>8+ Freelance Clients</div>
             <div>5+ Honors & Awards</div>
             <div>10+ Open-source Projects</div>
-          </div>
+          </div> */}
         </div>
       </BannerLayout>
     </div>
