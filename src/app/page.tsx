@@ -13,7 +13,7 @@ export default function Home() {
         <Banner/>
         <Expertise/>
         <Reccomendations/>
-        <Clients/>
+        {/* <Clients/> */}
         <Footer/>
       </div>
     </>
