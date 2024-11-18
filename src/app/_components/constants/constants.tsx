@@ -251,3 +251,43 @@ export const PROJECTS = [
     imageURL: "/images/expense-tracker.png",
   },
 ];
+
+
+
+export const ROADMAP = [
+  {
+    id: 1,
+    title: "Phase 1: Planning",
+    description: "Research and gather requirements.",
+    date: "January 2024",
+    completed: true,
+  },
+  {
+    id: 2,
+    title: "Phase 2: Design",
+    description: "Create wireframes and UI designs.",
+    date: "February 2024",
+    completed: true,
+  },
+  {
+    id: 3,
+    title: "Phase 3: Development",
+    description: "Build features and implement functionality.",
+    date: "March 2024",
+    completed: false,
+  },
+  {
+    id: 4,
+    title: "Phase 4: Testing",
+    description: "Perform tests and debugging.",
+    date: "April 2024",
+    completed: false,
+  },
+  {
+    id: 5,
+    title: "Phase 5: Launch",
+    description: "Deploy the website.",
+    date: "May 2024",
+    completed: false,
+  },
+];

@@ -1,45 +1,56 @@
 "use client";
 
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import BannerLayout from "../_components/layouts/BannerLayout";
 import { CONTACTS } from "../_components/constants/constants";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { SiUpwork } from "react-icons/si";
 import { HiMail, HiUser } from "react-icons/hi";
-import { BsChatTextFill } from "react-icons/bs";
+import { BsChatTextFill, BsInstagram, BsTwitter } from "react-icons/bs";
 import Footer from "../_components/HomeComponents/Footer";
+import { LiaLinkedin } from "react-icons/lia";
+import { FaFacebook } from "react-icons/fa";
 
 const Contact = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const form = useRef<HTMLFormElement | null>(null);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const form = useRef<HTMLFormElement | null>(null); 
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (form.current) {
       emailjs
-        .sendForm('service_3s73tyl', 'template_kmnplmf', form.current, '4WJY6NkRd272G5dvl')
+        .sendForm(
+          "service_3s73tyl",
+          "template_kmnplmf",
+          form.current,
+          "4WJY6NkRd272G5dvl"
+        )
         .then(
           () => {
-            console.log(form)
-            console.log('SUCCESS!');
+            setIsModalOpen(true); // Open modal on success
           },
           (error) => {
-            console.log('FAILED...', error.text);
+            console.error("Failed to send email...", error.text);
           }
         );
     }
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setFormData({ name: "", email: "", message: "" }); // Reset form
   };
 
   return (
@@ -70,7 +81,12 @@ const Contact = () => {
               </div>
               <div className="flex justify-between items-center">
                 <span className="md:text-base">LinkedIn:</span>
-                <a href={CONTACTS.Linkedin} target="_blank" rel="noopener noreferrer" className="text-LightGray text-sm">
+                <a
+                  href={CONTACTS.Linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-LightGray text-sm"
+                >
                   View Profile
                 </a>
               </div>
@@ -84,18 +100,46 @@ const Contact = () => {
 
         {/* Social Links Section */}
         <div className="h-16 w-full card_stylings text-xl sm:text-3xl flex gap-x-8 sm:gap-x-16 items-center justify-center text-Snow">
-          <a className="hover:scale-125 ease-in-out duration-700" href={`mailto:${CONTACTS.EMAIL}`} target="_blank" rel="noreferrer">
+          <a
+            className="hover:scale-125 ease-in-out duration-700"
+            href={`mailto:${CONTACTS.EMAIL}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             <HiMail />
           </a>
-          {/* <a className="hover:scale-125 ease-in-out duration-700" href={CONTACTS.Github} target="_blank" rel="noreferrer">
-            <FaGithub />
-          </a> */}
-          <a className="hover:scale-125 ease-in-out duration-700" href={CONTACTS.Linkedin} target="_blank" rel="noreferrer">
-            <FaLinkedin />
+          <a
+            className="hover:scale-125 ease-in-out duration-700"
+            href={CONTACTS.Linkedin}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <LiaLinkedin/>
           </a>
-          {/* <a className="hover:scale-125 ease-in-out duration-700 text-2xl sm:text-4xl mt-1" href={CONTACTS.Upwork} target="_blank" rel="noreferrer">
-            <SiUpwork />
-          </a> */}
+          <a
+            className="hover:scale-125 ease-in-out duration-700"
+            href={`mailto:${CONTACTS.EMAIL}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaFacebook/>
+          </a>
+          <a
+            className="hover:scale-125 ease-in-out duration-700"
+            href={`mailto:${CONTACTS.EMAIL}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsInstagram />
+          </a>
+          <a
+            className="hover:scale-125 ease-in-out duration-700"
+            href={`mailto:${CONTACTS.EMAIL}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsTwitter />
+          </a>
         </div>
 
         {/* Contact Form Section */}
@@ -158,6 +202,34 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+          <div className="bg-white rounded-lg w-full max-w-md mx-4 p-6 shadow-lg relative">
+            <button
+              onClick={closeModal}
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 focus:outline-none"
+            >
+              &times;
+            </button>
+            <h2 className="text-lg font-semibold text-gray-800 mb-4">
+              Message Sent!
+            </h2>
+            <p className="text-gray-700 mb-6">
+              Thank you for reaching out! I will get back to you as soon as
+              possible.
+            </p>
+            <button
+              onClick={closeModal}
+              className="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       <Footer />
     </BannerLayout>
   );

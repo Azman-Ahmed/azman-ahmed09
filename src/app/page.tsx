@@ -4,6 +4,7 @@ import Expertise from "./_components/HomeComponents/Expertise";
 import Reccomendations from "./_components/HomeComponents/Reccomendations";
 import Clients from "./_components/HomeComponents/Clients";
 import Footer from "./_components/HomeComponents/Footer";
+import Roadmap from "./_components/HomeComponents/CPJourney";
 
 export default function Home() {
   
@@ -12,7 +13,8 @@ export default function Home() {
       <div className="Home-page -z-10">
         <Banner/>
         <Expertise/>
-        <Reccomendations/>
+        <Roadmap/>
+        {/* <Reccomendations/> */}
         {/* <Clients/> */}
         <Footer/>
       </div>
