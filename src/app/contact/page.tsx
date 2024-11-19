@@ -114,19 +114,19 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <LiaLinkedin/>
+            <LiaLinkedin />
           </a>
           <a
             className="hover:scale-125 ease-in-out duration-700"
-            href={`mailto:${CONTACTS.EMAIL}`}
+            href={CONTACTS.Facebook}
             target="_blank"
             rel="noreferrer"
           >
-            <FaFacebook/>
+            <FaFacebook />
           </a>
           <a
             className="hover:scale-125 ease-in-out duration-700"
-            href={`mailto:${CONTACTS.EMAIL}`}
+            href={CONTACTS.Instagram}
             target="_blank"
             rel="noreferrer"
           >
@@ -134,7 +134,7 @@ const Contact = () => {
           </a>
           <a
             className="hover:scale-125 ease-in-out duration-700"
-            href={`mailto:${CONTACTS.EMAIL}`}
+            href={CONTACTS.Twitter}
             target="_blank"
             rel="noreferrer"
           >
@@ -147,52 +147,56 @@ const Contact = () => {
           <h1 className="text-lg font-bold">Get In Touch</h1>
           <div className="mt-4 py-8 px-8 bg-EveningBlack rounded-xl text-sm">
             <form ref={form} onSubmit={sendEmail}>
+              {/* Name Input */}
               <div className="flex flex-col w-full mb-6">
                 <div className="relative">
-                  <HiUser className="absolute inset-y-0 left-0 flex items-center pl-3 text-xl pointer-events-none" />
+                  <HiUser className="absolute inset-y-0 left-3 flex items-center text-xl pointer-events-none" style={{ top: '11px' }} /> 
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="input_stylings"
+                    className="input_stylings pl-10"
                     placeholder="Name"
                     required
                   />
                 </div>
               </div>
 
+              {/* Email Input */}
               <div className="flex flex-col w-full mb-6">
                 <div className="relative">
-                  <HiMail className="absolute inset-y-0 left-0 flex items-center text-xl pl-3 pointer-events-none" />
+                  <HiMail className="absolute inset-y-0 left-3 flex items-center text-xl pointer-events-none" style={{ top: '11px' }} /> 
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="input_stylings"
+                    className="input_stylings pl-10"
                     placeholder="Email"
                     required
                   />
                 </div>
               </div>
 
+              {/* Message Textarea */}
               <div className="flex flex-col w-full mb-6">
                 <div className="relative">
-                  <BsChatTextFill className="absolute top-3 left-0 flex items-center text-lg pl-3 pointer-events-none" />
+                  <BsChatTextFill className="absolute top-3 left-3 flex items-center text-lg pointer-events-none" style={{ top: '11px' }} /> 
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={6}
                     cols={50}
-                    className="input_stylings"
+                    className="input_stylings pl-10"
                     placeholder="Message"
                     required
                   />
                 </div>
               </div>
 
+              {/* Submit Button */}
               <div className="my-4">
                 <button type="submit" className="button">
                   SEND MESSAGE

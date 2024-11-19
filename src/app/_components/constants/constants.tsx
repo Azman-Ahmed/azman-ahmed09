@@ -70,6 +70,9 @@ export const CONTACTS = {
   City: 'Dhaka',
   Current1: 'SoftBD Ltd.',
   Linkedin: 'www.linkedin.com/in/azman-ewubd',
+  Facebook: 'https://www.facebook.com/azman.ahmed.7796',
+  Instagram: 'https://www.instagram.com/a_z_man_/profilecard/',
+  Twitter: '',
 };
 
 export const SOCIAL_LINKS = {
@@ -192,64 +195,40 @@ export const REVIEWS = [
 ];
 
 
-
 export const PROJECTS = [
   {
-    id: 1,
-    title: "Portfolio Website",
+    id: 0,
+    title: "Stylometry-based Author Profiling on Bangla Text Using Text Clustering",
     description:
-      "A personal portfolio website built with React and TailwindCSS to showcase projects and achievements.",
-    githubURL: "https://github.com/Azman-Ahmed/portfolio",
-    imageURL: "/images/portfolio.png",
+      "This project focuses on author profiling using stylometric analysis of Bangla texts. By employing text clustering techniques, we aim to identify and group texts written by the same author. The repository includes data preprocessing scripts, feature extraction methods, clustering algorithms, and evaluation metrics tailored for Bangla language texts.",
+    githubURL: "https://github.com/Azman-Ahmed/Stylometry-based-Author-Profiling-on-Bangla-Text-Using-Text-Clustering",
+    imageURL: "/images/stylometry-project.png",
+  },
+  {
+    id: 1,
+    title: "DoDash",
+    description:
+      "I’ve finished working on DoDash, a To-Do app built with Laravel. It includes features like user authentication with Jetstream, task creation, editing, and deletion, as well as status tracking and due dates. Next steps: I plan to integrate React to improve the frontend and make it more interactive.",
+    githubURL: "https://github.com/Azman-Ahmed/DoDash",
+    imageURL: "/images/dodash.png",
   },
   {
     id: 2,
-    title: "E-commerce Platform",
+    title: "Portfolio Website using NEXTJS 15",
     description:
-      "A full-stack e-commerce application with features like cart, payment gateway integration, and admin dashboard.",
-    githubURL: "https://github.com/Azman-Ahmed/ecommerce",
-    imageURL: "/images/ecommerce.png",
+      "A portfolio website built using NEXTJS 15 to showcase projects and achievements. The website is designed to be responsive and includes a section for displaying projects and contact information.",
+    githubURL: "https://github.com/Azman-Ahmed/azman-ahmed09",
+    imageURL: "/images/portfolio-website.png",
   },
   {
     id: 3,
-    title: "Blog Website",
+    title: "Laravel-React CRUD Application",
     description:
-      "A dynamic blog platform where users can write, edit, and read articles. Built with Next.js and Markdown support.",
-    githubURL: "https://github.com/Azman-Ahmed/blog",
-    imageURL: "/images/blog.png",
+      "A simple CRUD application built using Laravel for the backend and React for the frontend. This project demonstrates the integration of these two technologies for building a full-stack application.",
+    githubURL: "https://github.com/Azman-Ahmed/Laravel-Reacts-CRUD",
+    imageURL: "/images/laravel-react-crud.png",
   },
-  {
-    id: 4,
-    title: "Task Management App",
-    description:
-      "A task management system that helps users organize their work with features like deadlines, priority, and reminders.",
-    githubURL: "https://github.com/Azman-Ahmed/task-manager",
-    imageURL: "/images/task-manager.png",
-  },
-  {
-    id: 5,
-    title: "Weather Dashboard",
-    description:
-      "A weather forecasting dashboard using OpenWeather API, with real-time updates and interactive charts.",
-    githubURL: "https://github.com/Azman-Ahmed/weather-dashboard",
-    imageURL: "/images/weather-dashboard.png",
-  },
-  {
-    id: 6,
-    title: "Chat Application",
-    description:
-      "A real-time chat application built using WebSocket, React, and Node.js, featuring private and group chats.",
-    githubURL: "https://github.com/Azman-Ahmed/chat-app",
-    imageURL: "/images/chat-app.png",
-  },
-  {
-    id: 7,
-    title: "Expense Tracker",
-    description:
-      "A financial tracking app to log and categorize expenses, with monthly breakdowns and graphical reports.",
-    githubURL: "https://github.com/Azman-Ahmed/expense-tracker",
-    imageURL: "/images/expense-tracker.png",
-  },
+  
 ];
 
 
@@ -291,3 +270,36 @@ export const ROADMAP = [
     completed: false,
   },
 ];
+
+
+
+export const CompetitionItem = [
+  {
+    id: 0,
+    title: "National Collegiate Programming Contest",
+    description: "A nationwide coding competition testing algorithmic problem-solving skills.",
+    date: "2024-03-13",
+    location: "Jahangirnagar University, Savar, Dhaka-1342",
+    imageURL: "/images/ncpc2023.jpg", 
+    competitionType: "Coding",
+  },  
+  {
+    id: 1,
+    title: "UAP Inter University Programming Contest",
+    description: "An inter University coding competition testing algorithmic problem-solving skills.",
+    date: "2024-04-17",
+    location: "University Asia Pacific, Dhaka",
+    imageURL: "/images/uap2024.jpg", 
+    competitionType: "Coding",
+  },  
+  {
+    id: 2,
+    title: "2023 ICPC Asia Dhaka Regional Site Online Preliminary Contest",
+    description: "An online preliminary contest for ICPC Asia Dhaka Regional Site.", // Add a placeholder or meaningful description
+    date: "2023-10-13",
+    location: "Dhaka, Bangladesh",
+    imageURL: "/images/icpc2023regional.png", 
+    competitionType: "Coding",
+  },  
+];
+

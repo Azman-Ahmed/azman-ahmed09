@@ -16,9 +16,9 @@ const Nav = ({ setIsOpen, isOpen }: { setIsOpen: any; isOpen: any }) => {
                 </div>
                 <div className='flex flex-col gap-y-2 px-6 w-full transition'>
                     <NavItem setIsOpen={setIsOpen} NavRoute={'/'} NavIcon={<ImHome />} NavText={'Home'} />
-                    <NavItem setIsOpen={setIsOpen} NavRoute={'/contact'} NavIcon={<FaHandshake />} NavText={'Contact'} />
                     <NavItem setIsOpen={setIsOpen} NavRoute={'/background'} NavIcon={<HiIdentification />} NavText={'Background'} />
                     <NavItem setIsOpen={setIsOpen} NavRoute={'/projects'} NavIcon={<FaTasks/>} NavText='My Projects'/>
+                    <NavItem setIsOpen={setIsOpen} NavRoute={'/contact'} NavIcon={<FaHandshake />} NavText={'Contact'} />
                     <NavItem setIsOpen={setIsOpen} NavRoute={'/blogs'} NavIcon={<FaBlog/>} NavText='My Blogs'/>                   
                 </div>
             </div>
