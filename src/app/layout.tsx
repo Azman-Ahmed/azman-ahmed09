@@ -1,7 +1,7 @@
 "use client";
 
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/react"
 import { useState } from "react";
 import { FaBars, FaMousePointer } from "react-icons/fa";
 import { SlOptionsVertical } from "react-icons/sl";

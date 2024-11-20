@@ -12,6 +12,7 @@
     "@apollo/client": "^3.11.10",
     "@emailjs/browser": "^4.4.1",
     "@tanstack/react-query": "^5.60.5",
+    "@vercel/analytics": "^1.4.1",
     "axios": "^1.7.7",
     "chart": "^0.1.2",
     "chart.js": "^4.4.6",
