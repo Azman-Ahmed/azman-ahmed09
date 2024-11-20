@@ -2,6 +2,7 @@
 
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { useState } from "react";
 import { FaBars, FaMousePointer } from "react-icons/fa";
 import { SlOptionsVertical } from "react-icons/sl";
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Analytics/>
+      <SpeedInsights/>
       <head>
         {/* Metadata, SEO tags, etc., can be added here */}
       </head>
