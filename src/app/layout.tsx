@@ -19,6 +19,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <Analytics/>
       <head>
         {/* Metadata, SEO tags, etc., can be added here */}
       </head>
