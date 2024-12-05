@@ -1,5 +1,5 @@
-import Badge from './Badges';
-import { TECH_STACK } from '../constants/constants';
+import Badge from '../../intro/Badges';
+import { TECH_STACK } from '../../ConstantData/constants';
 const Tools = () => {
   return (
     <div className='flex flex-col space-y-1 pt-6'>

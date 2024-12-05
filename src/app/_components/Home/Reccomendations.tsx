@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import ParagraphSkeleton from "@/app/background/ParagraphSkeleton";
-import { RECOMMENDATIONS } from "../constants/constants"; 
+import { RECOMMENDATIONS } from "../ConstantData/constants"; 
 import RecommendationCard from "@/app/background/RecommendationCard";
 
 interface Recommendation {

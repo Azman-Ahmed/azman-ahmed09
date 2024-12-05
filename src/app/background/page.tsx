@@ -1,7 +1,7 @@
 import React from "react";
-import Footer from "../_components/HomeComponents/Footer";
+import Footer from "../_components/Common/Footer";
 import BannerLayout from "../_components/layouts/BannerLayout";
-import { EDUCATION, EXPERIENCE } from "../_components/constants/constants";
+import { EDUCATION, EXPERIENCE } from "../_components/ConstantData/constants";
 import CardLayout from "./CardLayout";
 
 function Background() {

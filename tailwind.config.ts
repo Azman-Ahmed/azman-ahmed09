@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        ipadAir: '1024px', // iPad Air
+        ipadPro: '1366px', // iPad Pro
+      },
       colors: {
         Green: '#32CD32', 
         MidNightBlack: '#121212',

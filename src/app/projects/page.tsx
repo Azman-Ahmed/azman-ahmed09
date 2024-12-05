@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "../background/ProjectCard"; // Renamed to ProjectCard for clarity
 import ImageAndParagraphSkeleton from "../background/ImageAndParagraphSkeleton";
-import { PROJECTS } from "../_components/constants/constants";  // Import your mock data
-import Footer from "../_components/HomeComponents/Footer";
+import { PROJECTS } from "../_components/ConstantData/constants";  // Import your mock data
+import Footer from "../_components/Common/Footer";
 
 // Define the ProjectItem interface
 interface ProjectItem {

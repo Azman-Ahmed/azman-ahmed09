@@ -3,10 +3,10 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import BannerLayout from "../_components/layouts/BannerLayout";
-import { CONTACTS } from "../_components/constants/constants";
+import { CONTACTS } from "../_components/ConstantData/constants";
 import { HiMail, HiUser } from "react-icons/hi";
 import { BsChatTextFill, BsInstagram, BsTwitter } from "react-icons/bs";
-import Footer from "../_components/HomeComponents/Footer";
+import Footer from "../_components/Common/Footer";
 import { LiaLinkedin } from "react-icons/lia";
 import { FaFacebook } from "react-icons/fa";
 

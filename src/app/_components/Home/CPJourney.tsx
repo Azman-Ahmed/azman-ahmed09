@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import { ROADMAP } from "../constants/constants"; 
+import { ROADMAP } from "../ConstantData/constants"; 
 
 interface Milestone {
   id: number;
@@ -13,7 +13,7 @@ interface Milestone {
   completed: boolean;
 }
 
-const Roadmap = () => {
+const CPJourney = () => {
   const [milestones, setMilestones] = useState<Milestone[]>(ROADMAP);
 
   return (
@@ -42,4 +42,4 @@ const Roadmap = () => {
   );
 };
 
-export default Roadmap;
+export default CPJourney;

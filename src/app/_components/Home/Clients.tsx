@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import ParagraphSkeleton from "@/app/background/ParagraphSkeleton";
 import ReviewCard from "@/app/background/ReviewCard";
-import { REVIEWS } from "../constants/constants"; 
+import { REVIEWS } from "../ConstantData/constants"; 
 
 
 // Define the type for the review data

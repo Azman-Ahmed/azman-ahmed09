@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import ExpertiseCard from "@/app/background/ExpertiseCard";
 import ParagraphSkeleton from "@/app/background/ParagraphSkeleton";
-import { EXPERTISE } from "../constants/constants"; 
+import { EXPERTISE } from "../ConstantData/constants";
 
 interface Expertise {
   id: number;
@@ -24,8 +24,10 @@ const MyExpertise = () => {
 
   return (
     <>
-      <div className="px-2 md:px-8 py-4 text-lg font-bold text-Snow">My Expertise</div>
-      <div className="grid justify items-center grid-flow-row md:grid-cols-2 lg:grid-cols-3 grid-rows-auto gap-4 px-2 md:px-8">
+      <div className="px-4 md:px-8 py-4 text-xl font-bold text-Snow text-center md:text-left">
+        My Expertise
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8">
         {isLoading ? (
           [1, 2, 3, 4, 5, 6].map((_, index) => (
             <ParagraphSkeleton key={index} className={"space-y-2 p-8"} />

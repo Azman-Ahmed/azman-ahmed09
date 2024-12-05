@@ -9,19 +9,19 @@ const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
 
 const Banner = () => {
   return (
-    <div>
+    <div className="mb-20 sm:mb-12 md:mb-16 lg:mb-20 xl:mb-24 2xl:mb-28"> {/* Added margin-bottom */}
       <BannerLayout>
         <div className="absolute inset-0 z-20 flex items-center justify-center py-6 w-full h-full bg-gradient-to-t from-MidNightBlack">
-          {/* Two-Column Layout */}
-          <div className="bg-LightGray/10 w-[90%] max-w-4xl px-6 py-6 rounded-xl grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+          {/* Responsive Two-Column Layout */}
+          <div className="bg-LightGray/10 w-[90%] max-w-4xl px-6 py-6 rounded-xl grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
             {/* Left Column: Text Section */}
-            <div className="space-y-4 text-left">
-              {/* Title */}
-              <div className="text-xl sm:text-2xl xl:text-3xl text-Snow font-bold">
+            <div className="space-y-4 text-center lg:text-left">
+              <div className="text-2xl sm:text-3xl lg:text-4xl text-Snow font-bold">
                 Hello World! Azman Here
               </div>
+
               {/* Typewriter Effect */}
-              <div className="font-cascadia-normal text-Snow text-sm sm:text-base xl:text-lg">
+              <div className="font-cascadia-normal text-Snow text-base sm:text-lg lg:text-xl">
                 <span>
                   {"<"}
                   <span className="text-Green font-bold">div</span>
@@ -43,8 +43,9 @@ const Banner = () => {
                   {">"}
                 </span>
               </div>
+
               {/* Button */}
-              <button className="bg-Green text-Snow px-6 py-2 rounded-lg font-bold">
+              <button className="bg-Green text-Snow px-6 py-2 rounded-lg font-bold hover:bg-Green/90">
                 Explore
               </button>
             </div>
@@ -52,7 +53,7 @@ const Banner = () => {
             {/* Right Column: Image Section */}
             <div className="flex items-center justify-center">
               <Image
-                className="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full object-cover"
+                className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full object-cover"
                 src={azman}
                 alt="profile picture"
               />

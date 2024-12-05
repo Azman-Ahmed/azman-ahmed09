@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { CompetitionItem as CompetitionData } from "../constants/constants"; // Import the constants with competition data
-import Footer from "./Footer";
+import { CompetitionItem as CompetitionData } from "../ConstantData/constants"; // Import the constants with competition data
+import Footer from "../Common/Footer";
 import ImageAndParagraphSkeleton from "@/app/background/ImageAndParagraphSkeleton";
 import CompetitionCard from "@/app/background/CompetitionCard";
 

@@ -1,4 +1,4 @@
-import { DETAILS } from '.././constants/constants';
+import { DETAILS } from '../../ConstantData/constants';
 
 const Location = () => {
 

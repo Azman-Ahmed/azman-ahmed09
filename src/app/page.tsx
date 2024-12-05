@@ -1,11 +1,12 @@
 import Image from "next/image";
-import Banner from "./_components/HomeComponents/Banner";
-import Expertise from "./_components/HomeComponents/Expertise";
-import Reccomendations from "./_components/HomeComponents/Reccomendations";
-import Clients from "./_components/HomeComponents/Clients";
-import Footer from "./_components/HomeComponents/Footer";
-import Roadmap from "./_components/HomeComponents/CPJourney";
-import CompetitionsJourney from "./_components/HomeComponents/CompetitionsJourney";
+import Banner from "./_components/Home/Banner";
+import Expertise from "./_components/Home/Expertise";
+import Reccomendations from "./_components/Home/Reccomendations";
+import Clients from "./_components/Home/Clients";
+import Footer from "./_components/Common/Footer";
+import Roadmap from "./_components/Home/CPJourney";
+import CompetitionsJourney from "./_components/Home/CompetitionsJourney";
+import CPJourney from "./_components/Home/CPJourney";
 
 export default function Home() {
   
@@ -16,7 +17,7 @@ export default function Home() {
         <Expertise/>
         <CompetitionsJourney/>
 
-        {/* <Roadmap/> */}
+        {/* <CPJourney/> */}
         {/* <Reccomendations/> */}
         {/* <Clients/> */}
         <Footer/>

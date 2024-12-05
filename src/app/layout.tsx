@@ -3,11 +3,12 @@
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaBars, FaMousePointer } from "react-icons/fa";
 import { SlOptionsVertical } from "react-icons/sl";
-import Intro from "./_components/intro/sidebar";
+import Intro from "./_components/LeftSideBar/sidebar";
 import Nav from "./_components/intro/rightbar";
+import LeftSideBar from "./_components/LeftSideBar/sidebar";
 
 
 export default function RootLayout({
@@ -18,6 +19,22 @@ export default function RootLayout({
   const [isOpen, setIsOpen] = useState(false);
   const [intro, setIntro] = useState(false);
 
+  // There was a hydration error during version 1, 
+  // dont know where I did that hydration error, 
+  // untill that error catch my and I fix it, this hook will supress the error
+
+  const [isHydrated, setIsHydrated] = useState(false); 
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  if(!isHydrated) return null;
+
+  // 
+
+  
+
   return (
     <html lang="en">
       <Analytics/>
@@ -26,16 +43,13 @@ export default function RootLayout({
         {/* Metadata, SEO tags, etc., can be added here */}
       </head>
       <body className="h-screen font-circular bg-DeepNightBlack text-LightGray">
-        
         <div className={`h-screen lg:p-[0.8rem] flex flex-col select-none font-circular`}>
-        
-        
           <div className='lg:hidden'>
             <div className=' bg-DeepNightBlack text-LightGray w-full h-10 flex items-center justify-between px-2 lg:hidden relative'>
 
+
               {/* left top icon and its functionality */}
               <div className='icon flex items-center gap-x-2' onClick={(e) => setIntro(!intro)}>
-                
                 {/* The three dots on the left corner */}
                 <span className='icon border-2 text-Green border-Green p-1 text-sm rounded-lg'>
                   <SlOptionsVertical />
@@ -45,8 +59,9 @@ export default function RootLayout({
                 <div className='text-Snow absolute -right-1 -bottom-1'>
                   <FaMousePointer /> 
                 </div>
-                
               </div>
+
+
 
               {/* Right Top icon and its functionality */}
               <div className='icon flex items-center gap-x-2' onClick={(e) => setIsOpen(!isOpen)}>
@@ -64,20 +79,27 @@ export default function RootLayout({
 
 
           <div className='flex relative h-full justify-between gap-x-3'>
+
             {/* left most side */}
             <div
               className={`w-64 h-screen left-0 lg:rounded-xl -top-10 lg:top-0 lg:left-0 lg:h-full overflow-hidden bg-DeepNightBlack shadow-2xl z-50 lg:flex flex-col  lg:relative ${
                 intro ? 'flex absolute' : 'hidden'
               }`}>
-              <Intro isOpen={intro} setIsOpen={setIntro} />
+              <LeftSideBar isOpen={intro} setIsOpen={setIntro} />
             </div>
             {/* overlay */}
             {intro && <div onClick={(e) => setIntro(false)} className='fixed top-0 left-0  w-full h-full bg-black/50 backdrop-blur-[2px] z-40'></div>}
+
+
+
 
             {/* middle of screen */}
             <div className='w-full h-auto lg:w-9/12 shadow-2xl bg-DeepNightBlack relative overflow-auto overflow-x-hidden no-scrollbar'>
               {children}
             </div>
+            
+
+
             
 
             {/* right side */}

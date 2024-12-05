@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../_components/HomeComponents/Footer';
+import Footer from '../_components/Common/Footer';
 
 const ComingSoonCard = () => {
   return (
