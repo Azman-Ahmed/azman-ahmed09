@@ -1,11 +1,11 @@
 // Nav.tsx
 
 import { ImCross } from 'react-icons/im';
-import { FaBlog, FaHandshake, FaTasks } from 'react-icons/fa';
+import { FaBlog, FaBook, FaHandshake, FaTasks } from 'react-icons/fa';
 import { ImHome } from 'react-icons/im';
 import { HiIdentification } from 'react-icons/hi';
-import NavItem from './NavItem';
-import DrawerLayout from './DrawerLayout';
+import NavItem from '../intro/NavItem';
+import DrawerLayout from '../intro/DrawerLayout';
 
 const Nav = ({ setIsOpen, isOpen }: { setIsOpen: any; isOpen: any }) => {
     return (
@@ -19,7 +19,8 @@ const Nav = ({ setIsOpen, isOpen }: { setIsOpen: any; isOpen: any }) => {
                     <NavItem setIsOpen={setIsOpen} NavRoute={'/background'} NavIcon={<HiIdentification />} NavText={'Background'} />
                     <NavItem setIsOpen={setIsOpen} NavRoute={'/projects'} NavIcon={<FaTasks/>} NavText='My Projects'/>
                     <NavItem setIsOpen={setIsOpen} NavRoute={'/contact'} NavIcon={<FaHandshake />} NavText={'Contact'} />
-                    <NavItem setIsOpen={setIsOpen} NavRoute={'/blogs'} NavIcon={<FaBlog/>} NavText='My Blogs'/>                   
+                    <NavItem setIsOpen={setIsOpen} NavRoute={'/blogs'} NavIcon={<FaBlog/>} NavText='My Blogs'/>  
+                    <NavItem setIsOpen={setIsOpen} NavRoute={'/CSE1111'} NavIcon={<FaBook/>} NavText='CSE1111'/>                 
                 </div>
             </div>
         </DrawerLayout>

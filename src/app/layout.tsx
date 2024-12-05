@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { FaBars, FaMousePointer } from "react-icons/fa";
 import { SlOptionsVertical } from "react-icons/sl";
 import Intro from "./_components/LeftSideBar/sidebar";
-import Nav from "./_components/intro/rightbar";
+import Nav from "./_components/RightSideBar/rightbar";
 import LeftSideBar from "./_components/LeftSideBar/sidebar";
 
 
@@ -33,7 +33,7 @@ export default function RootLayout({
 
   // 
 
-  
+
 
   return (
     <html lang="en">
