@@ -4,8 +4,8 @@ import { ImCross } from 'react-icons/im';
 import { FaBlog, FaBook, FaHandshake, FaTasks } from 'react-icons/fa';
 import { ImHome } from 'react-icons/im';
 import { HiIdentification } from 'react-icons/hi';
-import NavItem from '../intro/NavItem';
-import DrawerLayout from '../intro/DrawerLayout';
+import NavItem from '../layouts/NavItem';
+import DrawerLayout from '../layouts/DrawerLayout';
 
 const Nav = ({ setIsOpen, isOpen }: { setIsOpen: any; isOpen: any }) => {
     return (

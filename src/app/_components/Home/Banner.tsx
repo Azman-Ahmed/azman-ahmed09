@@ -7,9 +7,10 @@ import Image from "next/image";
 
 const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
 
-const Banner = () => {
+const Banner = ({ setIsOpen }: { setIsOpen?: (value: boolean) => void }) => {
   return (
-    <div className="mb-20 sm:mb-12 md:mb-16 lg:mb-20 xl:mb-24 2xl:mb-28"> {/* Added margin-bottom */}
+    <div className="mb-20 sm:mb-12 md:mb-16 lg:mb-20 xl:mb-24 2xl:mb-28">
+      {/* Added margin-bottom */}
       <BannerLayout>
         <div className="absolute inset-0 z-20 flex items-center justify-center py-6 w-full h-full bg-gradient-to-t from-MidNightBlack">
           {/* Responsive Two-Column Layout */}
@@ -45,7 +46,10 @@ const Banner = () => {
               </div>
 
               {/* Button */}
-              <button className="bg-Green text-Snow px-6 py-2 rounded-lg font-bold hover:bg-Green/90">
+              <button
+                className="bg-Green text-Snow px-6 py-2 rounded-lg font-bold hover:bg-Green/90"
+                onClick={() => setIsOpen && setIsOpen(true)}
+              >
                 Explore
               </button>
             </div>

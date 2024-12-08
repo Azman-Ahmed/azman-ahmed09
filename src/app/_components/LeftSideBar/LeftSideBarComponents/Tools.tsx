@@ -1,4 +1,4 @@
-import Badge from '../../intro/Badges';
+import Badge from '../../layouts/Badges';
 import { TECH_STACK } from '../../ConstantData/constants';
 const Tools = () => {
   return (
