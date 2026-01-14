@@ -109,14 +109,22 @@ export const EDUCATION = [
 export const EXPERIENCE = [
   {
     id: 1,
-    company: 'SoftBD Ltd.',
-    role: 'Full Stack Developer',
-    detail1: 'As a frontend developer, I use React, Next & JavaScript to build user interfaces for web applications And As A Backend Developer I am still learning advance features of Laravel 11',
-    duration: '07/2024 - Present',
+    company: 'Augmedix Bangladesh',
+    role: 'Product Support Specialist',
+    detail: 'I have Provided Support to stackholders of Augmedix Products',
+    duration: '01/2026 - Present',
     location: 'Dhaka, Bangladesh',
   },
   {
     id: 2,
+    company: 'SoftBD Ltd.',
+    role: 'Full Stack Developer',
+    detail1: 'As a frontend developer, I use React, Next & JavaScript to build user interfaces for web applications And As A Backend Developer I am still learning advance features of Laravel 11',
+    duration: '07/2024 - 12/2025',
+    location: 'Dhaka, Bangladesh',
+  },
+  {
+    id: 3,
     company: 'Fareast International University',
     role: 'Adjunct Faculty',
     detail: 'I Teach Fundamental of Computer Science in FIU',
@@ -124,7 +132,7 @@ export const EXPERIENCE = [
     location: 'Dhaka, Bangladesh',
   },
   {
-    id: 3,
+    id: 4,
     company: 'East West University',
     role: 'Undergraduate Teaching Assistant',
     detail: 'I have assisted faculties of the CSE department of East West University to conduct lab and classes',
